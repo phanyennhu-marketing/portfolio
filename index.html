@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phan Yến Như — Digital Marketing Portfolio</title>
+<style>
+:root{
+  --peri:#5B7CFA; --peri-d:#3F5DE0; --peri-l:#EEF2FF; --peri-ll:#F7F9FF;
+  --butter:#FFD166; --butter-d:#F0B429; --butter-l:#FFF8E6;
+  --mint:#4ECDC4;
+  --ink:#1B2440; --ink-2:#5A6786; --ink-3:#93A0BD;
+  --paper:#FFFDF8; --card:#FFFFFF; --line:#E4E9F7;
+  --r:18px; --shadow:0 1px 2px rgba(27,36,64,.04), 0 14px 34px -22px rgba(91,124,250,.45);
+  --maxw:1140px;
+  --font:"Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--peri-d)}
+h1,h2,h3,h4{margin:0;line-height:1.25;font-weight:800;text-wrap:balance}
+h1{font-size:clamp(2.1rem,5.5vw,3.2rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.45rem,3.2vw,2rem);letter-spacing:-.015em}
+h3{font-size:1.12rem}
+h4{font-size:.98rem}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1rem,4vw,2rem)}
+.eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--peri);font-weight:800}
+
+/* ---------- NAV ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.7rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:-.01em}
+.brand .dot{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--peri),var(--butter));display:grid;place-items:center;color:#fff;font-size:.72rem;font-weight:900}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav button{
+  font:inherit;font-size:.85rem;font-weight:700;color:var(--ink-2);background:transparent;border:0;
+  padding:.5rem .85rem;border-radius:999px;cursor:pointer;white-space:nowrap;transition:.18s;
+}
+nav button:hover{background:var(--peri-l);color:var(--peri-d)}
+nav button[aria-current="page"]{background:var(--peri);color:#fff;box-shadow:0 6px 16px -8px var(--peri)}
+
+/* ---------- PAGE ---------- */
+.page{display:none;padding:clamp(2rem,5vw,3.5rem) 0 5rem}
+.page.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.page-head{margin-bottom:2rem}
+.page-head h2{margin-top:.3rem}
+.page-head p{color:var(--ink-2);margin-top:.5rem;max-width:70ch}
+.note{font-size:.85rem;color:#7A5600;background:var(--butter-l);border:1px solid #FBE7B4;border-radius:10px;padding:.55rem .8rem;display:inline-block}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:clamp(1.1rem,2.5vw,1.6rem)}
+.grid{display:grid;gap:1.1rem}
+.sec{margin-top:2.5rem}
+.sec-title{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;flex-wrap:wrap}
+.sec-title h3{font-size:1.25rem}
+.sec-title::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--line),transparent);min-width:30px}
+.chip{display:inline-block;font-size:.78rem;font-weight:700;padding:.28rem .7rem;border-radius:999px;background:var(--peri-l);color:var(--peri-d);border:1px solid #DDE4FF}
+.chip.y{background:var(--butter-l);color:#8A6200;border-color:#FBE7B4}
+.chip.m{background:#E6FBF9;color:#0E7C74;border-color:#C4F1ED}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+
+/* ---------- HERO / ABOUT ---------- */
+.hero{display:grid;grid-template-columns:280px 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+.photo{border-radius:22px;overflow:hidden;border:5px solid #fff;box-shadow:0 24px 50px -28px rgba(91,124,250,.6);background:var(--peri-l)}
+.photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hero h1{margin-top:.4rem}
+.birth{display:inline-flex;align-items:center;gap:.45rem;margin-top:.5rem;font-weight:700;color:var(--ink-2);font-size:.95rem}
+.role-tag{display:inline-block;margin-top:.9rem;padding:.45rem 1rem;border-radius:999px;font-weight:800;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;background:var(--peri);color:#fff}
+.lede{margin-top:1.2rem;font-size:1.03rem;color:var(--ink-2)}
+.goal{border-left:4px solid var(--butter);background:var(--butter-l);padding:.9rem 1.1rem;border-radius:0 12px 12px 0}
+.goal + .goal{margin-top:.7rem}
+.goal b{color:var(--ink)}
+.info-list li{display:flex;gap:.75rem;padding:.6rem 0;border-bottom:1px dashed var(--line);font-size:.94rem}
+.hero .info-list li{flex-direction:column;gap:.3rem}
+.hero .info-list .k{padding-top:0}
+.info-list li:last-child{border-bottom:0}
+.info-list .k{min-width:96px;flex:0 0 auto;font-weight:700;color:var(--ink-3);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;padding-top:.15rem}
+.info-list li > span:last-child{min-width:0;overflow-wrap:anywhere}
+.copy{
+  font:inherit;font-size:.9rem;font-weight:700;color:var(--peri-d);background:var(--peri-l);
+  border:1px solid #DDE4FF;border-radius:8px;padding:.15rem .55rem;cursor:pointer;
+  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:.15s;text-align:left;
+}
+.copy:hover{background:#E2E9FF;border-color:#C2CFFF}
+.copy.done{background:#E6FBF9;color:#0E7C74;border-color:#C4F1ED}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.9rem;margin-top:1.2rem}
+.stat{background:linear-gradient(150deg,var(--peri-ll),#fff);border:1px solid var(--line);border-radius:14px;padding:1rem}
+.stat .n{font-size:1.7rem;font-weight:900;color:var(--peri-d);line-height:1.1}
+.stat .l{font-size:.78rem;color:var(--ink-2);margin-top:.25rem}
+
+/* ---------- TIMELINE ---------- */
+.tl-item{position:relative;padding:1.6rem 0;border-top:2px solid var(--line)}
+.tl-item:first-child{border-top:0;padding-top:.4rem}
+.tl-row{display:grid;grid-template-columns:190px 1fr;gap:1.5rem}
+@media(max-width:760px){.tl-row{grid-template-columns:1fr;gap:.6rem}}
+.tl-date{font-weight:800;color:var(--peri-d);font-size:.92rem}
+.tl-date .now{display:inline-block;margin-top:.4rem;font-size:.7rem;padding:.2rem .55rem;border-radius:999px;background:var(--mint);color:#053C38;font-weight:800;letter-spacing:.05em}
+.tl-co{color:var(--ink-2);font-weight:700;font-size:.9rem;margin-top:.15rem}
+.sow{margin-top:.9rem;display:grid;gap:.55rem}
+.sow li{display:grid;grid-template-columns:auto 1fr;gap:.6rem;font-size:.94rem;color:var(--ink-2)}
+.sow li::before{content:"";width:7px;height:7px;border-radius:3px;background:var(--butter-d);margin-top:.62rem}
+.sow b{color:var(--ink)}
+.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#0FA79C;margin-right:.4rem;box-shadow:0 0 0 0 rgba(15,167,156,.7);animation:pl 2s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 10px rgba(15,167,156,0)}100%{box-shadow:0 0 0 0 rgba(15,167,156,0)}}
+
+/* ---------- MEDIA GRIDS ---------- */
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.shot{overflow:hidden;border-radius:14px;border:1px solid var(--line);background:#fff;cursor:zoom-in;transition:.2s}
+.shot:hover{transform:translateY(-3px);box-shadow:0 18px 34px -22px rgba(91,124,250,.7);border-color:#C9D4FF}
+.shot img{width:100%;height:auto}
+.cap{font-size:.82rem;color:var(--ink-2);padding:.6rem .8rem;border-top:1px solid var(--line);background:var(--peri-ll)}
+
+/* design set: 1 cover + 3 squares */
+.set{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;box-shadow:var(--shadow)}
+.set-head{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap;padding:.9rem 1.1rem;background:var(--peri-ll);border-bottom:1px solid var(--line)}
+.set-head h4{font-size:1rem}
+.set-body{display:grid;gap:.8rem;padding:1rem;grid-template-columns:1.35fr 1fr}
+.set-body.portrait{grid-template-columns:.85fr 1fr}
+.set-body.single{grid-template-columns:1fr}
+@media(max-width:760px){.set-body,.set-body.portrait{grid-template-columns:1fr}}
+.set-squares{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;align-content:start}
+.set-squares .shot img{aspect-ratio:1/1;object-fit:cover}
+
+/* video */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.vcard{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:var(--shadow)}
+.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.vlabel{font-size:.8rem;font-weight:700;color:var(--ink);padding:.55rem .7rem;background:#fff;border-top:1px solid var(--line)}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
+.tbl th{background:var(--peri);color:#fff;text-align:left;padding:.7rem .8rem;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.tbl td{padding:.7rem .8rem;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--peri-ll)}
+.tbl b{color:var(--ink)}
+.scrollx{overflow-x:auto;border-radius:14px;border:1px solid var(--line)}
+
+/* workflow */
+.flow{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.step{background:#fff;border:2px solid var(--peri-l);border-radius:14px;padding:.9rem}
+.step .num{display:inline-block;background:var(--peri);color:#fff;font-size:.7rem;font-weight:900;padding:.12rem .5rem;border-radius:999px;margin-bottom:.4rem}
+.step h4{font-size:.88rem}
+.step p{font-size:.8rem;color:var(--ink-2);margin-top:.3rem}
+.step.out{border-color:var(--butter);background:var(--butter-l)}
+.todo{border:2px dashed var(--butter-d);background:var(--butter-l);border-radius:14px;padding:1.1rem;font-size:.9rem;color:#7A5600}
+.todo b{color:#5C4100}
+
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(16,22,42,.92);display:none;place-items:center;z-index:200;padding:2rem;cursor:zoom-out}
+#lb.on{display:grid}
+#lb img{max-width:100%;max-height:90vh;width:auto;border-radius:10px;box-shadow:0 30px 80px -20px #000}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-size:.85rem;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand"><span class="dot">PYN</span> Phan Yến Như</div>
+    <nav id="nav">
+      <button data-p="about" aria-current="page">About Me</button>
+      <button data-p="work">Work Experience</button>
+      <button data-p="seo">SEO</button>
+      <button data-p="content">Content &amp; Social</button>
+      <button data-p="perf">Performance</button>
+      <button data-p="ai">AI Automation</button>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= ABOUT ================= -->
+<section class="page active" id="about">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="photo"><img src="media/img/chan-dung.jpg" alt="Phan Yến Như"></div>
+        <div class="card pad" style="margin-top:1.1rem">
+          <div class="eyebrow">Thông tin liên lạc</div>
+          <ul class="info-list" style="margin-top:.5rem">
+            <li><span class="k">Điện thoại</span><button class="copy" type="button" data-copy="0327585234" title="Nhấp để copy">0327 585 234</button></li>
+            <li><span class="k">E-mail</span><button class="copy" type="button" data-copy="phanyennhucontact@gmail.com" title="Nhấp để copy">phanyennhucontact@gmail.com</button></li>
+            <li><span class="k">Địa chỉ</span><span>Hóc Môn, TP. Hồ Chí Minh</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow">About me</div>
+        <h1>Phan Yến Như</h1>
+        <div class="birth">🎂 05/08/2002</div>
+        <div><span class="role-tag">Digital Marketing</span></div>
+
+        <p class="lede">Hơn 4 năm chạm tay vào gần như đủ các mảng của Digital Marketing — từ vận hành sàn TMĐT, SEO, content &amp; social cho tới Performance Ads. Điểm mạnh của em là <b>thích nghi nhanh</b>, <b>làm việc có kế hoạch</b> và biết <b>ứng dụng AI</b> để rút ngắn quy trình thay vì làm thủ công.</p>
+
+        <div class="sec" style="margin-top:1.6rem">
+          <div class="sec-title"><h3>Mục tiêu công việc</h3></div>
+          <div class="goal"><b>Ngắn hạn — 1 năm:</b> Đào sâu Performance Marketing, kết hợp tư duy phân tích số liệu với khả năng sáng tạo để tự lập và triển khai trọn vẹn một kế hoạch marketing hiệu quả.</div>
+          <div class="goal"><b>Dài hạn — 5 năm:</b> Xây năng lực hoạch định chiến lược marketing đa kênh, hướng tới vai trò thiết kế và dẫn dắt các chiến lược dài hạn giúp thương hiệu tăng trưởng doanh thu bền vững.</div>
+        </div>
+
+        <div class="sec">
+          <div class="sec-title"><h3>Học vấn</h3></div>
+          <div class="card pad">
+            <h4>Trường Đại học Công nghiệp TP. Hồ Chí Minh</h4>
+            <div class="tl-co">Chuyên ngành Thương mại điện tử &nbsp;·&nbsp; GPA 3.14</div>
+            <div class="chips" style="margin-top:.7rem">
+              <span class="chip">2021 – 2025</span>
+              <span class="chip y">Dự kiến tốt nghiệp 11/2026</span>
+              <span class="chip m">🏆 Giải Nhì Nextgen Economists Challenge 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat"><div class="n">2.000+</div><div class="l">Từ khóa research trong 3 ngày</div></div>
+          <div class="stat"><div class="n">Top 1–2</div><div class="l">4 bài SEO onpage sau 2 tuần, chưa backlink</div></div>
+          <div class="stat"><div class="n">40K</div><div class="l">View 1 video TikTok tự xây kênh</div></div>
+          <div class="stat"><div class="n">130%</div><div class="l">KPI viral trung bình của team</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="page" id="work">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Work experience</div>
+      <h2>Quá trình làm việc</h2>
+      <p>5 vị trí trải dài từ vận hành TMĐT → SEO → Lead team Content → Digital Marketing tổng thể → Performance Ads.</p>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-row">
+          <div class="tl-date">03/2026 – 08/2026</div>
+          <div>
+            <h3>Nhân viên Performance Marketing <span style="font-weight:600;color:var(--ink-3)">(Shopee focus)</span></h3>
+            <div class="tl-co">Công ty CP Thời trang American</div>
+            <ul class="sow">
+              <li><span><b>Quản lý ngân sách &amp; KPI:</b> Lập và quản lý ngân sách quảng cáo tháng theo target GMV; chủ động lập chiến lược ads theo loại ngày (Normal, Warm-up, D-Day) để tối ưu chi phí và doanh thu.</span></li>
+              <li><span><b>Tối ưu chỉ số ads:</b> Theo dõi và tối ưu CPC, CP Traffic, CPA; trực tiếp vận hành toàn bộ công cụ quảng cáo nội sàn nhằm gia tăng điểm tiếp cận và chuyển đổi.</span></li>
+              <li><span><b>Khai thác Offsite Traffic:</b> Phối hợp chạy Facebook Ads dẫn link về Shopee để mở rộng nguồn traffic ngoại sàn.</span></li>
+              <li><span><b>Ứng dụng AI:</b> Tìm hiểu và đưa AI vào quy trình, rút ngắn thời gian xử lý và tối ưu hiệu suất.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-row">
+          <div class="tl-date">07/2025 – 02/2026</div>
+          <div>
+            <h3>Nhân viên Digital Marketing</h3>
+            <div class="tl-co">Công ty TNHH Thuốc BVTV Thiên Bình</div>
+            <ul class="sow">
+              <li><span><b>Tối ưu SEO:</b> Audit website, R&amp;D keyword, lập kế hoạch bài viết, viết bài chuẩn SEO, lập kế hoạch internal link.</span></li>
+              <li><span><b>Quản lý kênh social:</b> Facebook — lập kế hoạch và phát triển nội dung Fanpage. TikTok — xây mới kênh cung cấp thông tin, kiến thức cho nông dân.</span></li>
+              <li><span><b>Media:</b> Quay/chụp, thiết kế và edit hình ảnh, video cho các kênh truyền thông.</span></li>
+              <li><span><b>Sự kiện:</b> Tham gia tổ chức hội thảo nông dân tại đại lý, tổ chức chương trình tư vấn bán hàng tại điểm.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-row">
+          <div class="tl-date">08/2024 – 08/2025</div>
+          <div>
+            <h3>Lead Team Marketing + CTV Content</h3>
+            <div class="tl-co">Công ty TNHH MIDTHINK — Brand Midori, Underthinker</div>
+            <ul class="sow">
+              <li><span><b>Planning:</b> Lập kế hoạch bài đăng TikTok, Fanpage; tạo và quản lý kênh TikTok chính và kênh Affiliate vệ tinh; lập kế hoạch truyền thông sản phẩm mới và remarketing sản phẩm cũ.</span></li>
+              <li><span><b>Booking KOC:</b> Lập kế hoạch booking và kiểm duyệt nội dung KOC.</span></li>
+              <li><span><b>Nhân sự:</b> Phân bổ nhân sự đảm bảo tiến độ công việc — quản lý nhóm 15 người.</span></li>
+              <li><span><b>Ads:</b> Tạo, đọc chỉ số và ra quyết định với TikTok Ads, Shopee Ads.</span></li>
+              <li><span><b>AI:</b> Cập nhật xu hướng AI mới nhất vào quy trình làm việc của team.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-row">
+          <div class="tl-date">10/2023 – 07/2024</div>
+          <div>
+            <h3>Nhân viên SEO</h3>
+            <div class="tl-co">Công ty TNHH ECXO</div>
+            <ul class="sow">
+              <li><span><b>Research:</b> Research keyword và define topic.</span></li>
+              <li><span><b>Tối ưu onpage:</b> Viết content chuẩn SEO onpage, lập kế hoạch onair và internal link, viết TUM, tối ưu hình ảnh, kiểm tra thứ hạng và lập kế hoạch bổ sung/chỉnh sửa nội dung.</span></li>
+              <li><span><b>Hỗ trợ backlink:</b> Đăng ký và đi backlink (blog 2.0, social post, forum), viết content backlink 600 – 1.000 chữ.</span></li>
+              <li><span><b>Content:</b> Content social, viết headline và description chạy Google Ads.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-row">
+          <div class="tl-date">03/2021 – 02/2022</div>
+          <div>
+            <h3>Nhân viên quản lý kênh TMĐT</h3>
+            <div class="tl-co">Công ty CP Đầu tư và Xuất nhập khẩu Nguyễn Minh</div>
+            <ul class="sow">
+              <li><span><b>Quản lý website:</b> Cập nhật thông tin sản phẩm, đảm bảo tính ổn định kỹ thuật và chất lượng thông tin, đảm bảo công cụ mua bán online hoạt động tốt.</span></li>
+              <li><span><b>Quản lý Fanpage:</b> Thiết kế banner, poster; lập kế hoạch và viết content Facebook.</span></li>
+              <li><span><b>CSKH:</b> Chăm sóc khách hàng và giải đáp thắc mắc.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEO ================= -->
+<section class="page" id="seo">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">SEO</div>
+      <h2>Search Engine Optimization</h2>
+      <p>Từ research keyword → định hình topic cluster → viết content chuẩn onpage → internal link → backlink. Kết quả: 2 bài Top 1 và 2 bài Top 2 sau 2 tuần khi chưa đi backlink.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="eyebrow">Kỹ năng</div>
+        <div class="chips" style="margin-top:.7rem">
+          <span class="chip">Keyword research</span><span class="chip">Define topic / cluster</span>
+          <span class="chip">Content chuẩn onpage</span><span class="chip">TUM (Title–URL–Meta)</span>
+          <span class="chip">Internal link planning</span><span class="chip">Tối ưu hình ảnh &amp; alt</span>
+          <span class="chip">Audit website</span><span class="chip">Rank tracking</span>
+          <span class="chip">Đăng ký domain</span><span class="chip">Backlink blog 2.0 / forum / social</span>
+          <span class="chip">Content backlink 600–1.000 chữ</span>
+        </div>
+      </div>
+      <div class="card pad">
+        <div class="eyebrow">Công cụ</div>
+        <div class="chips" style="margin-top:.7rem">
+          <span class="chip y">Google Keyword Planner</span><span class="chip y">Google Search Console</span>
+          <span class="chip y">Google Analytics</span><span class="chip y">Ahrefs</span>
+          <span class="chip y">Semrush</span><span class="chip y">Keywordtool.io</span>
+          <span class="chip y">Screaming Frog</span><span class="chip y">Google Sheets / Excel</span>
+          <span class="chip y">ChatGPT / Claude</span>
+        </div>
+        <p style="font-size:.8rem;color:var(--ink-3);margin-top:.8rem">Bạn xem lại danh sách công cụ này — công cụ nào không dùng thì mình bỏ, còn thiếu thì mình bổ sung.</p>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Research keywword</h3><span class="chip">5 bộ sheet · 5 dự án</span></div>
+      <div class="grid g2">
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-research-keyword.jpg" alt="Research keywword — BVTV Thiên Bình"><div class="cap">BVTV Thiên Bình — Group / Topic / Sub topic / Top queries, kèm Vol, Clicks, AVG Position, CTR và link bài đã lên</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-nat-center.jpg" alt="Research keywword — NAT Center"><div class="cap">NAT Center — 17 Category · 202 Topic · 1.244 keyword, chia volume theo category và topic</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-thang-loi.jpg" alt="Research keywword — Nón bảo hiểm Thắng Lợi"><div class="cap">Nón bảo hiểm Thắng Lợi — 30 Topic · 442 keyword · tổng volume 36.609, theo dõi Rank hiện tại và Rank cũ</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-pccc.jpg" alt="Research keywword — Golden Tech PCCC"><div class="cap">Golden Tech — cụm từ khóa ngành PCCC, phân tầng Topic / Sub-topic kèm Vol và giá thầu</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-mpe.jpg" alt="Research keywword — Golden Tech đèn LED MPE"><div class="cap">Golden Tech — cụm từ khóa đèn LED MPE</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Bài viết đã thực hiện</h3></div>
+      <div class="scrollx">
+        <table class="tbl">
+          <thead><tr><th style="width:38%">Tiêu đề bài viết</th><th>Dự án</th><th>Từ khóa chính</th><th>Loại</th><th>Bài viết</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Cấu tạo mũ bảo hiểm và chức năng các bộ phận của mũ bảo hiểm</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>cấu tạo mũ bảo hiểm</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/cau-tao-mu-non-bao-hiem.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>9+ Mẫu Nón Bảo Hiểm Có Kính Phi Công CHẤT LƯỢNG An Toàn</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>nón bảo hiểm có kính phi công</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/non-bao-hiem-co-kinh-phi-cong.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Mũ bảo hiểm chống nắng có kính râm và kính chống tia UV</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>mũ bảo hiểm chống tia UV</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/mu-bao-hiem-co-kinh-chong-tia-uv-che-nang-chong-nang-bang-kinh-ram.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Lốp Michelin Chính Hãng — Bảng Giá Cập Nhật</b></td>
+              <td>NAT Center</td><td>lốp michelin</td><td>Trang danh mục</td>
+              <td><a href="https://natcenter.vn/lop-o-to/lop-michelin/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Báo Giá Lốp Michelin 100Y 245/45R18 (ZR) Pilot Sport 5</b></td>
+              <td>NAT Center</td><td>lốp michelin 245 45r18</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-245-45r18-zr-100y-pilot-sport-5/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Lốp Michelin 235/75R15 110/107Q KM3 Goodrich</b></td>
+              <td>NAT Center</td><td>lốp michelin 235 75r15</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-235-75r15-110-107q-km3-goodrich/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Báo Giá Lốp Michelin 265/65R17 112H Primacy SUV+</b></td>
+              <td>NAT Center</td><td>lốp michelin 265 65r17</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-265-65r17-112h-primacy-suv/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr><td colspan="5" style="background:var(--butter-l);color:#7A5600"><b>+ khoảng 60 bài content backlink</b> (600 – 1.000 chữ) cho NAT Center, HelloVietTravel, Nón bảo hiểm Thắng Lợi và Xưởng may Phước An.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Tài liệu SEO Onpage</h3></div>
+      <div class="card pad">
+        <h4>Chuẩn SEO Onpage 2024</h4>
+        <p style="color:var(--ink-2);font-size:.92rem;margin-top:.3rem">Bộ tài liệu tự biên soạn, dùng để training và làm checklist chuẩn hóa onpage cho toàn bộ bài viết trong dự án.</p>
+        <p style="margin-top:.8rem"><a class="chip" href="media/docs/Chuan-SEO-Onpage-2024.pptx" download>⬇ Tải tài liệu (.pptx)</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTENT & SOCIAL ================= -->
+<section class="page" id="content">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Content &amp; Social Media</div>
+      <h2>Video TikTok &amp; Design Post</h2>
+      <p>Xây kênh TikTok cho Công ty Thiên Bình từ con số 0. Quản lý 20 kênh TikTok vệ tinh cho brand Midori và Underthinker. CTV content bán hàng cho Midori và Underthinker.</p>
+    </div>
+
+    <div class="sec" style="margin-top:0">
+      <div class="sec-title"><h3>Kết quả kênh TikTok</h3></div>
+      <div class="stat-row" style="margin-top:0">
+        <div class="stat"><div class="n">40.000</div><div class="l">View video "Mẹo canh ngày xịt phòng sâu đục thân"</div></div>
+        <div class="stat"><div class="n">207</div><div class="l">Follower mới từ 1 video</div></div>
+        <div class="stat"><div class="n">22.52s</div><div class="l">Thời gian xem trung bình</div></div>
+        <div class="stat"><div class="n">200+</div><div class="l">Follower sau 20 ngày xây kênh mới</div></div>
+      </div>
+      <div class="shot" style="margin-top:1rem" onclick="zoom(this)">
+        <img src="media/img/tiktok-analytics-40k.jpg" alt="TikTok Studio analytics 40K view">
+        <div class="cap">TikTok Studio — kênh @bvtv.thienbinh: 40K view, 510 tim, 207 follower mới, 257h35m tổng thời gian phát</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Video content — BVTV Thiên Bình</h3><span class="chip m">Kiến thức nông nghiệp</span></div>
+      <div class="vgrid">
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-sau-duc-than.jpg" src="media/video/bvtv-sau-duc-than.mp4"></video><div class="vlabel">Canh ngày xịt sâu đục thân · <span style="color:var(--peri-d)">40K view</span></div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-dao-on.jpg" src="media/video/bvtv-dao-on.mp4"></video><div class="vlabel">Đạo ôn &amp; thối gốc trên lúa</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-sau-ve-bua.jpg" src="media/video/bvtv-sau-ve-bua.mp4"></video><div class="vlabel">Hoạt chất quản lý sâu vẽ bùa</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-nam-coc-hoa-cuc.jpg" src="media/video/bvtv-nam-coc-hoa-cuc.mp4"></video><div class="vlabel">Nấm cóc trên hoa cúc</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-vuon-buoi-p1.jpg" src="media/video/bvtv-vuon-buoi-p1.mp4"></video><div class="vlabel">Thực tế vườn bưởi — Phần 1</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-vuon-buoi-p2.jpg" src="media/video/bvtv-vuon-buoi-p2.mp4"></video><div class="vlabel">Thực tế vườn bưởi — Phần 2</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-bo-tri-bong.jpg" src="media/video/bvtv-bo-tri-bong.mp4"></video><div class="vlabel">Hoạt chất trị bọ trĩ bông sầu riêng</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-dao-on-dom-nau.jpg" src="media/video/bvtv-dao-on-dom-nau.mp4"></video><div class="vlabel">Phân biệt đạo ôn &amp; đốm nâu</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-muoi-hanh.jpg" src="media/video/bvtv-muoi-hanh.mp4"></video><div class="vlabel">Nhận biết muỗi hành sớm</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/bvtv-nhen-do.jpg" src="media/video/bvtv-nhen-do.mp4"></video><div class="vlabel">Cách xác định nhện đỏ sầu riêng</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Video content — Midori</h3><span class="chip m">Thời trang &amp; phụ kiện</span></div>
+      <div class="vgrid">
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-brandon.jpg" src="media/video/midori-brandon.mp4"></video><div class="vlabel">Balo Brandon</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-global-tote.jpg" src="media/video/midori-global-tote.mp4"></video><div class="vlabel">Global Tote</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-iron-ut.jpg" src="media/video/midori-iron-ut.mp4"></video><div class="vlabel">Iron — Underthinker</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-hop-but.jpg" src="media/video/midori-hop-but.mp4"></video><div class="vlabel">Hộp bút V2</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-vi-jennie.jpg" src="media/video/midori-vi-jennie.mp4"></video><div class="vlabel">Ví Jennie</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-ctv-06.jpg" src="media/video/midori-ctv-06.mp4"></video><div class="vlabel">CTV Content — sản phẩm mới</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-cloudie.jpg" src="media/video/midori-cloudie.mp4"></video><div class="vlabel">Balo Cloudie</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-chopper.jpg" src="media/video/midori-chopper.mp4"></video><div class="vlabel">Túi Chopper</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-lushbag.jpg" src="media/video/midori-lushbag.mp4"></video><div class="vlabel">Lush Bag</div></div>
+        <div class="vcard"><video controls preload="none" poster="media/video/midori-melo.jpg" src="media/video/midori-melo.mp4"></video><div class="vlabel">Túi Melo đen</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Booking &amp; làm việc với content creator</h3><span class="chip m">Midori · Underthinker</span></div>
+      <p style="color:var(--ink-2);font-size:.94rem;margin-bottom:1rem;max-width:74ch">Từ brief sản phẩm cho creator → nhận video → kiểm duyệt từng clip theo checklist (nội dung, nhạc nền, cách gọi tên sản phẩm, các từ vi phạm chính sách TikTok) → trả feedback chỉnh sửa → duyệt đăng.</p>
+      <div class="grid g2">
+        <div class="shot" onclick="zoom(this)"><img src="media/img/booking-creator-3.jpg" alt="Brief sản phẩm cho content creator"><div class="cap">Brief quay video Midori × ECG đợt T8+9/2025 — link sản phẩm, phân loại, cách đọc tên, số lượng video và danh sách lưu ý tránh vi phạm</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/booking-creator-1.jpg" alt="Kiểm duyệt nội dung team Trung"><div class="cap">Bảng kiểm duyệt theo team — trạng thái, kênh đăng, ngày đăng và feedback chỉnh sửa cho từng video</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/booking-creator-2.jpg" alt="Tracking content creator"><div class="cap">Tracking sản lượng từng creator — tên video, kênh đăng, ngày đăng, tình trạng duyệt</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/booking-creator-4.jpg" alt="Feedback kiểm duyệt từng video"><div class="cap">Feedback chi tiết từng video: cắt chữ vi phạm, chỉnh nhạc nền, sửa cách so sánh sản phẩm</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Kế hoạch air &amp; quản lý nội dung TikTok</h3><span class="chip">20+ kênh vệ tinh</span></div>
+      <div class="shot" onclick="zoom(this)">
+        <img src="media/img/quan-ly-20-kenh-tiktok.jpg" alt="Plan đăng content TikTok 20 kênh vệ tinh">
+        <div class="cap">Plan đăng content TikTok — phân video theo KOC, sản phẩm, kênh TikTok và kênh Shopee, gán nhân sự phụ trách và theo dõi trạng thái đã đăng theo từng ngày</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Design post — BVTV Thiên Bình</h3><span class="chip">1 ảnh cover + 3 ảnh vuông / bộ</span></div>
+      <div class="grid" style="gap:1.4rem">
+
+        <div class="set">
+          <div class="set-head"><h4>3 dấu hiệu không nên rửa bông sầu riêng sau mưa</h4><span class="chip">Cover ngang 3:2 + 3 slide vuông</span></div>
+          <div class="set-body">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set1-cover.jpg" alt="Cover — 3 dấu hiệu không nên rửa bông sầu riêng sau mưa"><div class="cap">Ảnh cover</div></div>
+            <div class="set-squares">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set1-s1.jpg" alt="Slide 1"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set1-s2.jpg" alt="Slide 2"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set1-s3.jpg" alt="Slide 3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="set-head"><h4>Giải pháp xử lý nhện đỏ trên sầu riêng</h4><span class="chip">Cover dọc 2:3 + 3 slide vuông</span></div>
+          <div class="set-body portrait">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set2-cover.jpg" alt="Cover — Giải pháp xử lý nhện đỏ trên sầu riêng"><div class="cap">Ảnh cover</div></div>
+            <div class="set-squares">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set2-s1.jpg" alt="Slide 1"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set2-s2.jpg" alt="Slide 2"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set2-s3.jpg" alt="Slide 3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="set-head"><h4>Chặn đứng nấm cóc — giữ trọn mùa cúc Tết</h4><span class="chip">Cover ngang 3:2 + 3 slide vuông</span></div>
+          <div class="set-body">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set3-cover.jpg" alt="Cover — Chặn đứng nấm cóc giữ trọn mùa cúc Tết"><div class="cap">Ảnh cover</div></div>
+            <div class="set-squares">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set3-s1.jpg" alt="Slide 1"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set3-s2.jpg" alt="Slide 2"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-set3-s3.jpg" alt="Slide 3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="set-head"><h4>Diệt sạch sâu đục thân — Mondo 90SC</h4><span class="chip">Post đơn</span></div>
+          <div class="set-body single">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/bvtv-mondo-sau-duc-than.jpg" alt="Mondo 90SC — diệt sạch sâu đục thân"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Design post — Midori</h3><span class="chip">1 ảnh cover + 3 ảnh vuông / bộ</span></div>
+      <div class="grid" style="gap:1.4rem">
+
+        <div class="set">
+          <div class="set-head"><h4>Cloudie Bag — "float through your day"</h4><span class="chip">Cover dọc A4 + 3 slide vuông</span></div>
+          <div class="set-body portrait">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/midori-cloudie-bag.jpg" alt="Cloudie Bag cover"><div class="cap">Ảnh cover</div></div>
+            <div class="set-squares">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-cloudie-bag-2.jpg" alt="Cloudie slide 1"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-cloudie-bag-3.jpg" alt="Cloudie slide 2"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-cloudie-bag-4.jpg" alt="Cloudie slide 3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="set-head"><h4>Lush Bag</h4><span class="chip">Cover dọc 2:3 + 3 slide vuông</span></div>
+          <div class="set-body portrait">
+            <div class="shot" onclick="zoom(this)"><img src="media/img/midori-lushbag.jpg" alt="Lush Bag cover"><div class="cap">Ảnh cover</div></div>
+            <div class="set-squares">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-lushbag-2.jpg" alt="Lush Bag slide 1"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-lushbag-3.jpg" alt="Lush Bag slide 2"></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-lushbag-4.jpg" alt="Lush Bag slide 3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="set-head"><h4>Ví &amp; túi — post đơn</h4><span class="chip">Amour Wallet · Riona Wallet · Winkie Tote</span></div>
+          <div class="set-body single">
+            <div class="grid g3">
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-amour-wallet.jpg" alt="Amour Wallet"><div class="cap">Amour Wallet — vuông 1:1</div></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-riona-wallet.jpg" alt="Riona Wallet"><div class="cap">Riona Wallet — dọc 4:5</div></div>
+              <div class="shot" onclick="zoom(this)"><img src="media/img/midori-winkie-tote.jpg" alt="Winkie Tote"><div class="cap">Winkie Tote — ngang 3:2</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERFORMANCE ================= -->
+<section class="page" id="perf">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Performance Marketing</div>
+      <h2>Ngân sách, vận hành &amp; báo cáo</h2>
+      <p>Vận hành toàn bộ công cụ quảng cáo nội sàn Shopee (Product Ads, Shop Ads, Brand Ads, Shop GMV Max) và TikTok GMV Max — phân bổ ngân sách theo target GMV và theo loại ngày.</p>
+      <p class="note">🔒 Số liệu trong các ảnh bên dưới đã được làm mờ để bảo mật thông tin doanh nghiệp — chỉ hiển thị cấu trúc sheet và các cột chỉ số theo dõi.</p>
+    </div>
+
+    <div class="sec" style="margin-top:0">
+      <div class="sec-title"><h3>Nguyên tắc phân bổ ngân sách theo loại ngày</h3></div>
+      <div class="scrollx">
+        <table class="tbl">
+          <thead><tr><th>Loại ngày</th><th>Mục tiêu chính</th><th>Tỉ trọng ngân sách</th><th>Ưu tiên công cụ</th><th>Chỉ số theo dõi</th></tr></thead>
+          <tbody>
+            <tr><td><b>Normal day</b></td><td>Giữ nhịp đơn, nuôi điểm sản phẩm</td><td>Trung bình</td><td>Product Ads</td><td>CP Traffic, CR</td></tr>
+            <tr><td><b>Warm-up</b></td><td>Gom traffic &amp; giỏ hàng trước D-Day</td><td>Cao nhất</td><td>Shop GMV Max, Product GMV Max, Offsite</td><td>%ATC</td></tr>
+            <tr><td><b>D-Day</b></td><td>Chốt đơn từ giỏ hàng đã gom, tối đa hóa GMV</td><td>Dồn lực theo khung giờ</td><td>Shop Ads, Brand Ads, Offsite</td><td>CR, CP Traffic, CIR</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Bảng kế hoạch phân bổ ngân sách</h3></div>
+      <div class="shot" onclick="zoom(this)">
+        <img src="media/img/perf-plan-budget-gmv.jpg" alt="Plan allocate budget và target GMV by date">
+        <div class="cap">Plan allocate budget &amp; target GMV by date — chia ngân sách và target doanh thu theo từng ngày trong tháng</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Báo cáo &amp; tracking</h3></div>
+      <div class="grid g2">
+        <div class="shot" onclick="zoom(this)"><img src="media/img/perf-report-campaigns.jpg" alt="Report campaigns"><div class="cap">Report campaigns — hiệu quả từng chiến dịch ads</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/perf-report-daily-hour.jpg" alt="Report daily by hour"><div class="cap">Report daily by hour — phân bổ đơn theo khung giờ để tối ưu giờ đẩy ngân sách</div></div>
+        <div class="shot" onclick="zoom(this)" style="grid-column:1/-1"><img src="media/img/perf-tracking-skus.jpg" alt="Tracking SKUs ads"><div class="cap">Tracking SKUs ads — theo dõi hiệu quả quảng cáo tới từng mã sản phẩm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI AUTOMATION ================= -->
+<section class="page" id="ai">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">AI — Automation</div>
+      <h2>Giảm 80% thời gian xử lý công việc</h2>
+      <p>Thay vì tải, đổi tên, copy số liệu thủ công mỗi ngày, em xây workflow tự động để dành thời gian cho phần phân tích và ra quyết định.</p>
+    </div>
+
+    <div class="stat-row" style="margin-top:0">
+      <div class="stat"><div class="n">-80%</div><div class="l">Thời gian xử lý công việc lặp lại</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Workflow đang vận hành</div></div>
+      <div class="stat"><div class="n">3–5</div><div class="l">Đơn hàng/video từ content AI</div></div>
+      <div class="stat"><div class="n">3–4</div><div class="l">Video AI viral &gt;10.000 view mỗi tháng</div></div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Workflow 01 — Tải video TikTok Affiliate hàng loạt</h3><span class="chip m">Đang chạy</span></div>
+      <div class="card pad">
+        <div class="flow">
+          <div class="step"><span class="num">01</span><h4>Input</h4><p>Danh sách link video Affiliate / KOC cần thu thập, dán vào sheet đầu vào.</p></div>
+          <div class="step"><span class="num">02</span><h4>Bóc link gốc</h4><p>Tự bóc link video không watermark từ từng URL.</p></div>
+          <div class="step"><span class="num">03</span><h4>Tải &amp; đặt tên</h4><p>Tải hàng loạt, tự đặt tên file theo mã sản phẩm / tên KOC.</p></div>
+          <div class="step out"><span class="num">04</span><h4>Output</h4><p>Thư mục video sẵn sàng để duyệt nội dung, re-up kênh vệ tinh và đăng Shopee Video.</p></div>
+        </div>
+        <div class="grid g2" style="margin-top:1.2rem">
+          <div class="shot" onclick="zoom(this)">
+            <img src="media/img/ai-workflow-download-tiktok.jpg" alt="Workflow tải video TikTok affiliate">
+            <div class="cap">Giao diện chạy workflow tải video TikTok Affiliate</div>
+          </div>
+          <div class="shot" onclick="zoom(this)">
+            <img src="media/img/ai-folder-workflow-tiktok.jpg" alt="Cấu trúc thư mục workflow TikTok">
+            <div class="cap">Cấu trúc thư mục workflow TikTok — script chạy (.bat), module python, log, data_upload, dashboard Performance_TikTok, Report GMV Max, Follow Video TikTok, Modeling Breakeven GMV Booking KOC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Workflow 02 — Tự động update báo cáo</h3><span class="chip m">Đang chạy</span></div>
+      <div class="card pad">
+        <div class="flow">
+          <div class="step"><span class="num">01</span><h4>Nguồn dữ liệu</h4><p>File export số liệu ads từ Shopee / TikTok Seller Center.</p></div>
+          <div class="step"><span class="num">02</span><h4>Chuẩn hóa</h4><p>Tự làm sạch, map cột và ghép nhiều nguồn về cùng một định dạng.</p></div>
+          <div class="step"><span class="num">03</span><h4>Đổ vào sheet báo cáo</h4><p>Ghi đúng vùng dữ liệu, công thức và pivot tự cập nhật theo.</p></div>
+          <div class="step out"><span class="num">04</span><h4>Output</h4><p>Report campaigns, daily by hour, tracking SKU và tiến độ GMV cập nhật tự động.</p></div>
+        </div>
+        <div class="shot" style="margin-top:1.2rem" onclick="zoom(this)">
+          <img src="media/img/ai-folder-workflow-shopee.jpg" alt="Cấu trúc thư mục workflow Shopee">
+          <div class="cap">Cấu trúc thư mục workflow Shopee — module python, data_upload, log, Tracking ad Shopee, Tracking SKU Shopee, Performance_Consolidated_Shopee và Performance_Dashboard_Shopee</div>
+        </div>
+
+        <div class="sec-title" style="margin-top:1.6rem"><h4>Báo cáo do workflow tự sinh ra</h4></div>
+        <div class="grid g2">
+          <div class="shot" onclick="zoom(this)"><img src="media/img/perf-report-campaigns.jpg" alt="Report campaigns"><div class="cap">Report campaigns</div></div>
+          <div class="shot" onclick="zoom(this)"><img src="media/img/perf-report-daily-hour.jpg" alt="Report daily by hour"><div class="cap">Report daily by hour</div></div>
+          <div class="shot" onclick="zoom(this)"><img src="media/img/perf-tracking-skus.jpg" alt="Tracking SKUs ads"><div class="cap">Tracking SKUs ads</div></div>
+          <div class="shot" onclick="zoom(this)"><img src="media/img/perf-plan-budget-gmv.jpg" alt="Plan budget và target GMV"><div class="cap">Plan allocate budget &amp; target GMV — tiến độ tự cập nhật theo số liệu mới</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Ứng dụng AI vào content</h3></div>
+      <div class="card pad">
+        <ul class="sow">
+          <li><span><b>Sản xuất nội dung Ads TikTok bằng AI:</b> chuyển đổi trung bình 3 – 5 đơn hàng/video.</span></li>
+          <li><span><b>3 – 4 video AI viral mỗi tháng</b> đạt trên 10.000 view trong 10 ngày (có hỗ trợ ads).</span></li>
+          <li><span><b>Kiểm soát chất lượng nội dung team:</b> team đạt trung bình 130% KPI viral.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">Phan Yến Như · Digital Marketing · 0327 585 234 · phanyennhucontact@gmail.com</div></footer>
+
+<div id="lb" onclick="this.classList.remove('on')"><img id="lbimg" alt=""></div>
+
+<script>
+  document.getElementById('nav').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-p]');
+    if(!b) return;
+    document.querySelectorAll('#nav button').forEach(function(x){ x.removeAttribute('aria-current'); });
+    b.setAttribute('aria-current','page');
+    document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+    document.getElementById(b.dataset.p).classList.add('active');
+    document.querySelectorAll('video').forEach(function(v){ v.pause(); });
+    window.scrollTo({top:0, behavior:'smooth'});
+    history.replaceState(null, '', '#' + b.dataset.p);
+  });
+
+  if(location.hash){
+    var t = document.querySelector('#nav button[data-p="' + location.hash.slice(1) + '"]');
+    if(t) t.click();
+  }
+
+  function zoom(el){
+    document.getElementById('lbimg').src = el.querySelector('img').src;
+    document.getElementById('lb').classList.add('on');
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') document.getElementById('lb').classList.remove('on');
+  });
+
+  document.querySelectorAll('.copy').forEach(function(btn){
+    var label = btn.textContent;
+    btn.addEventListener('click', function(){
+      var val = btn.dataset.copy;
+      var done = function(){
+        btn.textContent = '✓ Đã copy';
+        btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = label; btn.classList.remove('done'); }, 1600);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(val).then(done, function(){ fallback(val, done); });
+      } else {
+        fallback(val, done);
+      }
+    });
+  });
+
+  function fallback(val, done){
+    var ta = document.createElement('textarea');
+    ta.value = val;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch(err) { window.prompt('Copy thủ công:', val); }
+    document.body.removeChild(ta);
+  }
+</script>
+</body>
+</html>
