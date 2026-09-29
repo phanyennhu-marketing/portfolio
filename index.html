@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phan Yến Như — Digital Marketing Portfolio</title>
+<title>Phan Yến Như — Content Marketing Portfolio</title>
 <style>
 :root{
   --peri:#5B7CFA; --peri-d:#3F5DE0; --peri-l:#EEF2FF; --peri-ll:#F7F9FF;
@@ -156,6 +156,14 @@ nav button[aria-current="page"]{background:var(--peri);color:#fff;box-shadow:0 6
 #lb{position:fixed;inset:0;background:rgba(16,22,42,.92);display:none;place-items:center;z-index:200;padding:2rem;cursor:zoom-out}
 #lb.on{display:grid}
 #lb img{max-width:100%;max-height:90vh;width:auto;border-radius:10px;box-shadow:0 30px 80px -20px #000}
+/* tools */
+.tool-group + .tool-group{margin-top:1rem}
+.tool-group h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-bottom:.55rem}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:.7rem}
+.tool{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;font-size:.76rem;font-weight:700;color:var(--ink-2);line-height:1.25}
+.tool .ic{width:52px;height:52px;border-radius:14px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 8px 18px -14px rgba(91,124,250,.8);transition:.18s}
+.tool:hover .ic{transform:translateY(-2px);border-color:#C9D4FF}
+.tool .ic img{width:30px;height:30px;object-fit:contain}
 footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-size:.85rem;text-align:center}
 </style>
 </head>
@@ -167,8 +175,8 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
     <nav id="nav">
       <button data-p="about" aria-current="page">About Me</button>
       <button data-p="work">Work Experience</button>
-      <button data-p="seo">SEO</button>
       <button data-p="content">Content &amp; Social</button>
+      <button data-p="seo">SEO</button>
       <button data-p="perf">Performance</button>
       <button data-p="ai">AI Automation</button>
     </nav>
@@ -197,14 +205,14 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
         <div class="eyebrow">About me</div>
         <h1>Phan Yến Như</h1>
         <div class="birth">🎂 05/08/2002</div>
-        <div><span class="role-tag">Digital Marketing</span></div>
+        <div><span class="role-tag">Content Marketing Executive</span></div>
 
-        <p class="lede">Hơn 4 năm chạm tay vào gần như đủ các mảng của Digital Marketing — từ vận hành sàn TMĐT, SEO, content &amp; social cho tới Performance Ads. Điểm mạnh của em là <b>thích nghi nhanh</b>, <b>làm việc có kế hoạch</b> và biết <b>ứng dụng AI</b> để rút ngắn quy trình thay vì làm thủ công.</p>
+        <p class="lede">Hơn 4 năm làm Digital Marketing qua nhiều vị trí — từ SEO, social, TikTok đến quảng cáo sàn TMĐT — em nhận ra thế mạnh lớn nhất của mình là <b>dùng câu chữ để kể câu chuyện sản phẩm</b>. Em đã viết hơn 70 bài content SEO/PR, xây kênh TikTok kiến thức từ con số 0 và lên brief, kiểm duyệt nội dung cho đội KOC. Kinh nghiệm đọc số liệu quảng cáo giúp em viết content <b>không chỉ hay mà còn biết nội dung nào thực sự tạo ra chuyển đổi</b>.</p>
 
         <div class="sec" style="margin-top:1.6rem">
           <div class="sec-title"><h3>Mục tiêu công việc</h3></div>
-          <div class="goal"><b>Ngắn hạn — 1 năm:</b> Đào sâu Performance Marketing, kết hợp tư duy phân tích số liệu với khả năng sáng tạo để tự lập và triển khai trọn vẹn một kế hoạch marketing hiệu quả.</div>
-          <div class="goal"><b>Dài hạn — 5 năm:</b> Xây năng lực hoạch định chiến lược marketing đa kênh, hướng tới vai trò thiết kế và dẫn dắt các chiến lược dài hạn giúp thương hiệu tăng trưởng doanh thu bền vững.</div>
+          <div class="goal"><b>Ngắn hạn — 1 năm:</b> Phát triển chuyên sâu Content Marketing đa nền tảng (social, video ngắn, SEO); làm chủ quy trình từ thấu hiểu khách hàng, xây dựng thông điệp đến sản xuất và đo lường hiệu quả nội dung.</div>
+          <div class="goal"><b>Dài hạn — 5 năm:</b> Trở thành người xây dựng chiến lược nội dung, biến thông điệp doanh nghiệp thành những câu chuyện khách hàng muốn đọc, muốn tin và muốn hành động — góp phần xây dựng thương hiệu bền vững.</div>
         </div>
 
         <div class="sec">
@@ -213,18 +221,60 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
             <h4>Trường Đại học Công nghiệp TP. Hồ Chí Minh</h4>
             <div class="tl-co">Chuyên ngành Thương mại điện tử &nbsp;·&nbsp; GPA 3.14</div>
             <div class="chips" style="margin-top:.7rem">
-              <span class="chip">2021 – 2025</span>
+              <span class="chip">2021 – nay</span>
               <span class="chip y">Dự kiến tốt nghiệp 11/2026</span>
               <span class="chip m">🏆 Giải Nhì Nextgen Economists Challenge 2025</span>
             </div>
           </div>
         </div>
 
+        <div class="sec">
+          <div class="sec-title"><h3>Công cụ</h3></div>
+          <div class="card pad">
+            <div class="tool-group">
+              <h4>SEO &amp; Quảng cáo</h4>
+              <div class="tools">
+                <div class="tool"><span class="ic"><img src="https://www.gstatic.com/images/branding/product/2x/ads_96dp.png" alt="" loading="lazy"></span>Google Ads</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.google.com&amp;size=128" alt="" loading="lazy"></span>Keyword Planner</div>
+                <div class="tool"><span class="ic"><img src="https://www.gstatic.com/images/branding/product/2x/search_console_96dp.png" alt="" loading="lazy"></span>Search Console</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.screamingfrog.co.uk&amp;size=128" alt="" loading="lazy"></span>Screaming Frog</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://ahrefs.com&amp;size=128" alt="" loading="lazy"></span>Ahrefs</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://spineditor.com&amp;size=128" alt="" loading="lazy"></span>Spin Editor</div>
+              </div>
+            </div>
+            <div class="tool-group">
+              <h4>Thiết kế &amp; Video</h4>
+              <div class="tools">
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.canva.com&amp;size=128" alt="" loading="lazy"></span>Canva</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.capcut.com&amp;size=128" alt="" loading="lazy"></span>CapCut</div>
+              </div>
+            </div>
+            <div class="tool-group">
+              <h4>AI</h4>
+              <div class="tools">
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://claude.ai&amp;size=128" alt="" loading="lazy"></span>Claude</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://chatgpt.com&amp;size=128" alt="" loading="lazy"></span>ChatGPT</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://gemini.google.com&amp;size=128" alt="" loading="lazy"></span>Gemini</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://www.minimax.io&amp;size=128" alt="" loading="lazy"></span>MiniMax</div>
+              </div>
+            </div>
+            <div class="tool-group">
+              <h4>Văn phòng</h4>
+              <div class="tools">
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://word.cloud.microsoft&amp;size=128" alt="" loading="lazy"></span>Word</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://excel.cloud.microsoft&amp;size=128" alt="" loading="lazy"></span>Excel</div>
+                <div class="tool"><span class="ic"><img src="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=https://powerpoint.cloud.microsoft&amp;size=128" alt="" loading="lazy"></span>PowerPoint</div>
+                <div class="tool"><span class="ic"><img src="https://www.gstatic.com/images/branding/product/2x/drive_2020q4_96dp.png" alt="" loading="lazy"></span>Google Workspace</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="stat-row">
-          <div class="stat"><div class="n">2.000+</div><div class="l">Từ khóa research trong 3 ngày</div></div>
-          <div class="stat"><div class="n">Top 1–2</div><div class="l">4 bài SEO onpage sau 2 tuần, chưa backlink</div></div>
           <div class="stat"><div class="n">40K</div><div class="l">View 1 video TikTok tự xây kênh</div></div>
           <div class="stat"><div class="n">130%</div><div class="l">KPI viral trung bình của team</div></div>
+          <div class="stat"><div class="n">70+</div><div class="l">Bài content SEO &amp; PR đã viết</div></div>
+          <div class="stat"><div class="n">Top 1–2</div><div class="l">4 bài SEO onpage sau 2 tuần, chưa backlink</div></div>
         </div>
       </div>
     </div>
@@ -237,7 +287,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
     <div class="page-head">
       <div class="eyebrow">Work experience</div>
       <h2>Quá trình làm việc</h2>
-      <p>5 vị trí trải dài từ vận hành TMĐT → SEO → Lead team Content → Digital Marketing tổng thể → Performance Ads.</p>
+      <p>5 vị trí trải dài từ vận hành TMĐT → SEO → Lead team Content → Digital Marketing tổng thể → Performance Ads — xuyên suốt là viết, lên ý tưởng và kiểm duyệt nội dung cho thương hiệu.</p>
     </div>
 
     <div class="tl">
@@ -264,10 +314,10 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
             <h3>Nhân viên Digital Marketing</h3>
             <div class="tl-co">Công ty TNHH Thuốc BVTV Thiên Bình</div>
             <ul class="sow">
-              <li><span><b>Tối ưu SEO:</b> Audit website, R&amp;D keyword, lập kế hoạch bài viết, viết bài chuẩn SEO, lập kế hoạch internal link.</span></li>
-              <li><span><b>Quản lý kênh social:</b> Facebook — lập kế hoạch và phát triển nội dung Fanpage. TikTok — xây mới kênh cung cấp thông tin, kiến thức cho nông dân.</span></li>
+              <li><span><b>Nội dung social:</b> Xây mới kênh TikTok cung cấp thông tin, kiến thức cho nông dân; lập kế hoạch và phát triển nội dung Fanpage.</span></li>
+              <li><span><b>Content SEO:</b> Audit website, R&amp;D keyword, lập kế hoạch và viết bài chuẩn SEO, lập kế hoạch internal link.</span></li>
               <li><span><b>Media:</b> Quay/chụp, thiết kế và edit hình ảnh, video cho các kênh truyền thông.</span></li>
-              <li><span><b>Sự kiện:</b> Tham gia tổ chức hội thảo nông dân tại đại lý, tổ chức chương trình tư vấn bán hàng tại điểm.</span></li>
+              <li><span><b>Sự kiện:</b> Tham gia tổ chức hội thảo nông dân tại đại lý; tổ chức và thực hiện chương trình tư vấn bán hàng tại đại lý.</span></li>
             </ul>
           </div>
         </div>
@@ -280,11 +330,10 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
             <h3>Lead Team Marketing + CTV Content</h3>
             <div class="tl-co">Công ty TNHH MIDTHINK — Brand Midori, Underthinker</div>
             <ul class="sow">
-              <li><span><b>Planning:</b> Lập kế hoạch bài đăng TikTok, Fanpage; tạo và quản lý kênh TikTok chính và kênh Affiliate vệ tinh; lập kế hoạch truyền thông sản phẩm mới và remarketing sản phẩm cũ.</span></li>
-              <li><span><b>Booking KOC:</b> Lập kế hoạch booking và kiểm duyệt nội dung KOC.</span></li>
-              <li><span><b>Nhân sự:</b> Phân bổ nhân sự đảm bảo tiến độ công việc — quản lý nhóm 15 người.</span></li>
-              <li><span><b>Ads:</b> Tạo, đọc chỉ số và ra quyết định với TikTok Ads, Shopee Ads.</span></li>
-              <li><span><b>AI:</b> Cập nhật xu hướng AI mới nhất vào quy trình làm việc của team.</span></li>
+              <li><span><b>Kế hoạch nội dung:</b> Lập kế hoạch bài đăng TikTok, Fanpage; lập kế hoạch truyền thông sản phẩm mới và remarketing sản phẩm cũ; tạo và quản lý kênh TikTok chính cùng các kênh Affiliate vệ tinh.</span></li>
+              <li><span><b>Booking KOC:</b> Lập kế hoạch booking, brief và kiểm duyệt nội dung của KOC.</span></li>
+              <li><span><b>Nhân sự:</b> Phân bổ nhân sự (nhóm 15 người) đảm bảo hoàn thành công việc đúng tiến độ.</span></li>
+              <li><span><b>Ads &amp; AI:</b> Tạo, đọc chỉ số và ra quyết định với TikTok Ads, Shopee Ads; cập nhật xu hướng AI mới vào quy trình làm việc.</span></li>
             </ul>
           </div>
         </div>
@@ -297,10 +346,10 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
             <h3>Nhân viên SEO</h3>
             <div class="tl-co">Công ty TNHH ECXO</div>
             <ul class="sow">
+              <li><span><b>Content:</b> Viết 70+ bài content SEO onpage và content backlink (600 – 1.000 chữ) cho nhiều ngành; viết content social (Co.op Xtra), headline và description chạy Google Ads.</span></li>
               <li><span><b>Research:</b> Research keyword và define topic.</span></li>
-              <li><span><b>Tối ưu onpage:</b> Viết content chuẩn SEO onpage, lập kế hoạch onair và internal link, viết TUM, tối ưu hình ảnh, kiểm tra thứ hạng và lập kế hoạch bổ sung/chỉnh sửa nội dung.</span></li>
-              <li><span><b>Hỗ trợ backlink:</b> Đăng ký và đi backlink (blog 2.0, social post, forum), viết content backlink 600 – 1.000 chữ.</span></li>
-              <li><span><b>Content:</b> Content social, viết headline và description chạy Google Ads.</span></li>
+              <li><span><b>Tối ưu onpage:</b> Lập kế hoạch onair và internal link, viết TUM, tối ưu hình ảnh, kiểm tra thứ hạng và lập kế hoạch bổ sung/chỉnh sửa nội dung.</span></li>
+              <li><span><b>Hỗ trợ backlink:</b> Đăng ký và đi backlink (blog 2.0, social post, forum).</span></li>
             </ul>
           </div>
         </div>
@@ -313,115 +362,12 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
             <h3>Nhân viên quản lý kênh TMĐT</h3>
             <div class="tl-co">Công ty CP Đầu tư và Xuất nhập khẩu Nguyễn Minh</div>
             <ul class="sow">
-              <li><span><b>Quản lý website:</b> Cập nhật thông tin sản phẩm, đảm bảo tính ổn định kỹ thuật và chất lượng thông tin, đảm bảo công cụ mua bán online hoạt động tốt.</span></li>
-              <li><span><b>Quản lý Fanpage:</b> Thiết kế banner, poster; lập kế hoạch và viết content Facebook.</span></li>
-              <li><span><b>CSKH:</b> Chăm sóc khách hàng và giải đáp thắc mắc.</span></li>
+              <li><span><b>Quản lý Fanpage:</b> Lập kế hoạch, viết content Facebook; thiết kế banner, poster.</span></li>
+              <li><span><b>Quản lý website:</b> Cập nhật thông tin sản phẩm lên website; đảm bảo tính ổn định kỹ thuật, chất lượng thông tin và các công cụ mua bán online hoạt động tốt.</span></li>
+              <li><span><b>CSKH:</b> Chăm sóc và giải đáp thắc mắc của khách hàng.</span></li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SEO ================= -->
-<section class="page" id="seo">
-  <div class="wrap">
-    <div class="page-head">
-      <div class="eyebrow">SEO</div>
-      <h2>Search Engine Optimization</h2>
-      <p>Từ research keyword → định hình topic cluster → viết content chuẩn onpage → internal link → backlink. Kết quả: 2 bài Top 1 và 2 bài Top 2 sau 2 tuần khi chưa đi backlink.</p>
-    </div>
-
-    <div class="grid g2">
-      <div class="card pad">
-        <div class="eyebrow">Kỹ năng</div>
-        <div class="chips" style="margin-top:.7rem">
-          <span class="chip">Keyword research</span><span class="chip">Define topic / cluster</span>
-          <span class="chip">Content chuẩn onpage</span><span class="chip">TUM (Title–URL–Meta)</span>
-          <span class="chip">Internal link planning</span><span class="chip">Tối ưu hình ảnh &amp; alt</span>
-          <span class="chip">Audit website</span><span class="chip">Rank tracking</span>
-          <span class="chip">Đăng ký domain</span><span class="chip">Backlink blog 2.0 / forum / social</span>
-          <span class="chip">Content backlink 600–1.000 chữ</span>
-        </div>
-      </div>
-      <div class="card pad">
-        <div class="eyebrow">Công cụ</div>
-        <div class="chips" style="margin-top:.7rem">
-          <span class="chip y">Google Keyword Planner</span><span class="chip y">Google Search Console</span>
-          <span class="chip y">Google Analytics</span><span class="chip y">Ahrefs</span>
-          <span class="chip y">Semrush</span><span class="chip y">Keywordtool.io</span>
-          <span class="chip y">Screaming Frog</span><span class="chip y">Google Sheets / Excel</span>
-          <span class="chip y">ChatGPT / Claude</span>
-        </div>
-        <p style="font-size:.8rem;color:var(--ink-3);margin-top:.8rem">Bạn xem lại danh sách công cụ này — công cụ nào không dùng thì mình bỏ, còn thiếu thì mình bổ sung.</p>
-      </div>
-    </div>
-
-    <div class="sec">
-      <div class="sec-title"><h3>Research keywword</h3><span class="chip">5 bộ sheet · 5 dự án</span></div>
-      <div class="grid g2">
-        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-research-keyword.jpg" alt="Research keywword — BVTV Thiên Bình"><div class="cap">BVTV Thiên Bình — Group / Topic / Sub topic / Top queries, kèm Vol, Clicks, AVG Position, CTR và link bài đã lên</div></div>
-        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-nat-center.jpg" alt="Research keywword — NAT Center"><div class="cap">NAT Center — 17 Category · 202 Topic · 1.244 keyword, chia volume theo category và topic</div></div>
-        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-thang-loi.jpg" alt="Research keywword — Nón bảo hiểm Thắng Lợi"><div class="cap">Nón bảo hiểm Thắng Lợi — 30 Topic · 442 keyword · tổng volume 36.609, theo dõi Rank hiện tại và Rank cũ</div></div>
-        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-pccc.jpg" alt="Research keywword — Golden Tech PCCC"><div class="cap">Golden Tech — cụm từ khóa ngành PCCC, phân tầng Topic / Sub-topic kèm Vol và giá thầu</div></div>
-        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-mpe.jpg" alt="Research keywword — Golden Tech đèn LED MPE"><div class="cap">Golden Tech — cụm từ khóa đèn LED MPE</div></div>
-      </div>
-    </div>
-
-    <div class="sec">
-      <div class="sec-title"><h3>Bài viết đã thực hiện</h3></div>
-      <div class="scrollx">
-        <table class="tbl">
-          <thead><tr><th style="width:38%">Tiêu đề bài viết</th><th>Dự án</th><th>Từ khóa chính</th><th>Loại</th><th>Bài viết</th></tr></thead>
-          <tbody>
-            <tr>
-              <td><b>Cấu tạo mũ bảo hiểm và chức năng các bộ phận của mũ bảo hiểm</b></td>
-              <td>Nón bảo hiểm Thắng Lợi</td><td>cấu tạo mũ bảo hiểm</td><td>Content SEO</td>
-              <td><a href="https://nonbaohiemthangloi.com.vn/cau-tao-mu-non-bao-hiem.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>9+ Mẫu Nón Bảo Hiểm Có Kính Phi Công CHẤT LƯỢNG An Toàn</b></td>
-              <td>Nón bảo hiểm Thắng Lợi</td><td>nón bảo hiểm có kính phi công</td><td>Content SEO</td>
-              <td><a href="https://nonbaohiemthangloi.com.vn/non-bao-hiem-co-kinh-phi-cong.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>Mũ bảo hiểm chống nắng có kính râm và kính chống tia UV</b></td>
-              <td>Nón bảo hiểm Thắng Lợi</td><td>mũ bảo hiểm chống tia UV</td><td>Content SEO</td>
-              <td><a href="https://nonbaohiemthangloi.com.vn/mu-bao-hiem-co-kinh-chong-tia-uv-che-nang-chong-nang-bang-kinh-ram.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>Lốp Michelin Chính Hãng — Bảng Giá Cập Nhật</b></td>
-              <td>NAT Center</td><td>lốp michelin</td><td>Trang danh mục</td>
-              <td><a href="https://natcenter.vn/lop-o-to/lop-michelin/" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>Báo Giá Lốp Michelin 100Y 245/45R18 (ZR) Pilot Sport 5</b></td>
-              <td>NAT Center</td><td>lốp michelin 245 45r18</td><td>Content SEO</td>
-              <td><a href="https://natcenter.vn/gia-lop-michelin-245-45r18-zr-100y-pilot-sport-5/" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>Lốp Michelin 235/75R15 110/107Q KM3 Goodrich</b></td>
-              <td>NAT Center</td><td>lốp michelin 235 75r15</td><td>Content SEO</td>
-              <td><a href="https://natcenter.vn/gia-lop-michelin-235-75r15-110-107q-km3-goodrich/" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr>
-              <td><b>Báo Giá Lốp Michelin 265/65R17 112H Primacy SUV+</b></td>
-              <td>NAT Center</td><td>lốp michelin 265 65r17</td><td>Content SEO</td>
-              <td><a href="https://natcenter.vn/gia-lop-michelin-265-65r17-112h-primacy-suv/" target="_blank" rel="noopener">Xem bài ↗</a></td>
-            </tr>
-            <tr><td colspan="5" style="background:var(--butter-l);color:#7A5600"><b>+ khoảng 60 bài content backlink</b> (600 – 1.000 chữ) cho NAT Center, HelloVietTravel, Nón bảo hiểm Thắng Lợi và Xưởng may Phước An.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="sec">
-      <div class="sec-title"><h3>Tài liệu SEO Onpage</h3></div>
-      <div class="card pad">
-        <h4>Chuẩn SEO Onpage 2024</h4>
-        <p style="color:var(--ink-2);font-size:.92rem;margin-top:.3rem">Bộ tài liệu tự biên soạn, dùng để training và làm checklist chuẩn hóa onpage cho toàn bộ bài viết trong dự án.</p>
-        <p style="margin-top:.8rem"><a class="chip" href="media/docs/Chuan-SEO-Onpage-2024.pptx" download>⬇ Tải tài liệu (.pptx)</a></p>
       </div>
     </div>
   </div>
@@ -595,6 +541,107 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
   </div>
 </section>
 
+<!-- ================= SEO ================= -->
+<section class="page" id="seo">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">SEO</div>
+      <h2>Search Engine Optimization</h2>
+      <p>Từ research keyword → định hình topic cluster → viết content chuẩn onpage → internal link → backlink. Kết quả: 2 bài Top 1 và 2 bài Top 2 sau 2 tuần khi chưa đi backlink.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card pad">
+        <div class="eyebrow">Kỹ năng</div>
+        <div class="chips" style="margin-top:.7rem">
+          <span class="chip">Keyword research</span><span class="chip">Define topic / cluster</span>
+          <span class="chip">Content chuẩn onpage</span><span class="chip">TUM (Title–URL–Meta)</span>
+          <span class="chip">Internal link planning</span><span class="chip">Tối ưu hình ảnh &amp; alt</span>
+          <span class="chip">Audit website</span><span class="chip">Rank tracking</span>
+          <span class="chip">Backlink blog 2.0 / forum / social</span>
+          <span class="chip">Content backlink 600–1.000 chữ</span>
+        </div>
+      </div>
+      <div class="card pad">
+        <div class="eyebrow">Công cụ</div>
+        <div class="chips" style="margin-top:.7rem">
+          <span class="chip y">Google Keyword Planner</span><span class="chip y">Google Search Console</span>
+          <span class="chip y">Google Ads</span><span class="chip y">Ahrefs</span>
+          <span class="chip y">Screaming Frog</span><span class="chip y">Spin Editor</span>
+          <span class="chip y">Google Sheets / Excel</span><span class="chip y">Claude / ChatGPT / Gemini</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Research keyword</h3><span class="chip">5 bộ sheet · 5 dự án</span></div>
+      <div class="grid g2">
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-research-keyword.jpg" alt="Research keyword — BVTV Thiên Bình"><div class="cap">BVTV Thiên Bình — Group / Topic / Sub topic / Top queries, kèm Vol, Clicks, AVG Position, CTR và link bài đã lên</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-nat-center.jpg" alt="Research keyword — NAT Center"><div class="cap">NAT Center — 17 Category · 202 Topic · 1.244 keyword, chia volume theo category và topic</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-thang-loi.jpg" alt="Research keyword — Nón bảo hiểm Thắng Lợi"><div class="cap">Nón bảo hiểm Thắng Lợi — 30 Topic · 442 keyword · tổng volume 36.609, theo dõi Rank hiện tại và Rank cũ</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-pccc.jpg" alt="Research keyword — Golden Tech PCCC"><div class="cap">Golden Tech — cụm từ khóa ngành PCCC, phân tầng Topic / Sub-topic kèm Vol và giá thầu</div></div>
+        <div class="shot" onclick="zoom(this)"><img src="media/img/seo-sheet-golden-mpe.jpg" alt="Research keyword — Golden Tech đèn LED MPE"><div class="cap">Golden Tech — cụm từ khóa đèn LED MPE</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Bài viết đã thực hiện</h3></div>
+      <div class="scrollx">
+        <table class="tbl">
+          <thead><tr><th style="width:38%">Tiêu đề bài viết</th><th>Dự án</th><th>Từ khóa chính</th><th>Loại</th><th>Bài viết</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>Cấu tạo mũ bảo hiểm và chức năng các bộ phận của mũ bảo hiểm</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>cấu tạo mũ bảo hiểm</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/cau-tao-mu-non-bao-hiem.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>9+ Mẫu Nón Bảo Hiểm Có Kính Phi Công CHẤT LƯỢNG An Toàn</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>nón bảo hiểm có kính phi công</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/non-bao-hiem-co-kinh-phi-cong.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Mũ bảo hiểm chống nắng có kính râm và kính chống tia UV</b></td>
+              <td>Nón bảo hiểm Thắng Lợi</td><td>mũ bảo hiểm chống tia UV</td><td>Content SEO</td>
+              <td><a href="https://nonbaohiemthangloi.com.vn/mu-bao-hiem-co-kinh-chong-tia-uv-che-nang-chong-nang-bang-kinh-ram.html" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Lốp Michelin Chính Hãng — Bảng Giá Cập Nhật</b></td>
+              <td>NAT Center</td><td>lốp michelin</td><td>Trang danh mục</td>
+              <td><a href="https://natcenter.vn/lop-o-to/lop-michelin/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Báo Giá Lốp Michelin 100Y 245/45R18 (ZR) Pilot Sport 5</b></td>
+              <td>NAT Center</td><td>lốp michelin 245 45r18</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-245-45r18-zr-100y-pilot-sport-5/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Lốp Michelin 235/75R15 110/107Q KM3 Goodrich</b></td>
+              <td>NAT Center</td><td>lốp michelin 235 75r15</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-235-75r15-110-107q-km3-goodrich/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Báo Giá Lốp Michelin 265/65R17 112H Primacy SUV+</b></td>
+              <td>NAT Center</td><td>lốp michelin 265 65r17</td><td>Content SEO</td>
+              <td><a href="https://natcenter.vn/gia-lop-michelin-265-65r17-112h-primacy-suv/" target="_blank" rel="noopener">Xem bài ↗</a></td>
+            </tr>
+            <tr><td colspan="5" style="background:var(--butter-l);color:#7A5600"><b>+ khoảng 60 bài content backlink</b> (600 – 1.000 chữ) cho NAT Center, HelloVietTravel, Nón bảo hiểm Thắng Lợi và Xưởng may Phước An.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title"><h3>Tài liệu SEO Onpage</h3></div>
+      <div class="card pad">
+        <h4>Chuẩn SEO Onpage 2024</h4>
+        <p style="color:var(--ink-2);font-size:.92rem;margin-top:.3rem">Bộ tài liệu tự biên soạn, dùng để training và làm checklist chuẩn hóa onpage cho toàn bộ bài viết trong dự án.</p>
+        <p style="margin-top:.8rem"><a class="chip" href="media/docs/Chuan-SEO-Onpage-2024.pptx" download>⬇ Tải tài liệu (.pptx)</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PERFORMANCE ================= -->
 <section class="page" id="perf">
   <div class="wrap">
@@ -715,7 +762,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--ink-3);font-s
 
 </main>
 
-<footer><div class="wrap">Phan Yến Như · Digital Marketing · 0327 585 234 · phanyennhucontact@gmail.com</div></footer>
+<footer><div class="wrap">Phan Yến Như · Content Marketing · 0327 585 234 · phanyennhucontact@gmail.com</div></footer>
 
 <div id="lb" onclick="this.classList.remove('on')"><img id="lbimg" alt=""></div>
 
